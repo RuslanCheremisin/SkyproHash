@@ -21,7 +21,6 @@ public class Task2 {
                 itr.remove();
             }
         }
-
     }
 
     public Set<Integer> getIntegers() {

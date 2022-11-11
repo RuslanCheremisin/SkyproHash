@@ -16,8 +16,6 @@ public class RecipeLibrary {
         } else {
             recipes.add(recipe);
         }
-
-
     }
 
     public Set<Recipe> getRecipes() {

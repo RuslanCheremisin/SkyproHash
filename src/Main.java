@@ -1,11 +1,7 @@
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-
-        ///////////////// задача про рецепты /////////////
 
         Product potato = new Product("Potato",26);
         Product carrot = new Product("Carrot",34.6);
@@ -43,14 +39,10 @@ public class Main {
 
         System.out.println(Arrays.toString(rL.getRecipes().toArray()));
 
-        ////////////// задача про множество чисел и удаление нечётных ///////////
-
         Task2 task2 = new Task2();
         task2.randomizeIntegers();
-        System.out.println(task2.getIntegers());
+        System.out.println(Arrays.toString(task2.getIntegers().toArray()));
         task2.removeOdds();
-        System.out.println(task2.getIntegers());
+        System.out.println(Arrays.toString(task2.getIntegers().toArray()));
     }
-
-
 }

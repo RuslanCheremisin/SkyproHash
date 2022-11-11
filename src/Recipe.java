@@ -33,7 +33,6 @@ public class Recipe {
         return cost;
     }
 
-
     @Override
     public int hashCode(){
         return Objects.hash(recipeName,productList);
