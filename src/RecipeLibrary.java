@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,8 +18,10 @@ public class RecipeLibrary {
             recipes.add(recipe);
         }
     }
-
-    public Set<Recipe> getRecipes() {
-        return recipes;
+    public void printRecipeLibrary(){
+        System.out.println(Arrays.toString(recipes.toArray())+"\n" +
+                "---------------------------------");
     }
+
+
 }

@@ -15,11 +15,12 @@ public class Main {
         salad.addProduct(onion);
         salad.addProduct(cucumber);
 //        salad.addProduct(cucumber);
-//        salad.addProduct(cucumber2);
+//        salad.addProduct(cucumber2)
 
+        ;
 
-        System.out.println(Arrays.toString(salad.getProductList().toArray()));
-//        System.out.println(salad.getTotalProductsCost());
+//        System.out.println(Arrays.toString(salad.getProductList().toArray()));
+        System.out.println(salad.getTotalProductsCost());
 
         Recipe okroshka = new Recipe("Okroshka");
         okroshka.addProduct(potato);
@@ -28,7 +29,6 @@ public class Main {
         okroshka.addProduct(cucumber);
         Recipe neOkroshka = new Recipe("Okroshka");
 
-        System.out.println(Arrays.toString(okroshka.getProductList().toArray()));
 
 //        System.out.println(okroshka.equals(salad));
 
@@ -37,12 +37,18 @@ public class Main {
         rL.addRecipe(okroshka);
 //        rL.addRecipe(neOkroshka);
 
-        System.out.println(Arrays.toString(rL.getRecipes().toArray()));
+        salad.printIngredients();
+        rL.printRecipeLibrary();
 
         Task2 task2 = new Task2();
         task2.randomizeIntegers();
         System.out.println(Arrays.toString(task2.getIntegers().toArray()));
         task2.removeOdds();
-        System.out.println(Arrays.toString(task2.getIntegers().toArray()));
+        System.out.println(Arrays.toString(task2.getIntegers().toArray())+"\n" +
+                "---------------------------------");
+
+        MultiplicationTasksForStudents tasks = new MultiplicationTasksForStudents();
+        tasks.randomizeTasks();
+        tasks.printAllTasks();
     }
 }

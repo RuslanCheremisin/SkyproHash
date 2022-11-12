@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -27,10 +28,14 @@ public class Recipe {
 
     public double getTotalProductsCost(){
 
-        for(Product p: getProductList()){
+        for(Product p: productList){
             cost += p.getPrice();
         }
         return cost;
+    }
+    public void printIngredients(){
+        System.out.println(Arrays.toString(productList.toArray())+"\n" +
+                "---------------------------------");
     }
 
     @Override
@@ -52,9 +57,9 @@ public class Recipe {
     public String getRecipeName() {
         return recipeName;
     }
-    public Set<Product> getProductList(){
-        return productList;
-    }
+//    public Set<Product> getProductList(){
+//        return productList;
+//    }
 
     @Override
     public String toString(){
