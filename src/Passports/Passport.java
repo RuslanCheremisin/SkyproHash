@@ -68,7 +68,7 @@ public class Passport {
     }
 
     void setSurname(String surname) {
-        this.surname = ValidateUtil.validateString(name);
+        this.surname = ValidateUtil.validateString(surname);
     }
 
     void setBirthDate(String birthDate) {
