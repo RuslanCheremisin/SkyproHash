@@ -1,3 +1,6 @@
+import Passports.Passport;
+import Passports.PassportRecords;
+
 import java.util.Arrays;
 
 public class Main {
@@ -49,6 +52,20 @@ public class Main {
 
         MultiplicationTasksForStudents tasks = new MultiplicationTasksForStudents();
         tasks.randomizeTasks(15);
-        tasks.printAllTasks();
+//        tasks.printAllTasks();
+
+        PassportRecords passportRecords = new PassportRecords();
+        Passport mGibberman = new Passport(1234567890,"Mikhail", null, "Gibbermann", "12.12.2022");
+        passportRecords.addPassport(mGibberman);
+//        System.out.println(mGibberman);
+        passportRecords.printAllPassportsData();
+        Passport mPGibberman = new Passport(1234567890,"Mikhail", "Petrovich", "Gibbermann", "31.12.2022");
+        passportRecords.addPassport(mPGibberman);
+        passportRecords.printAllPassportsData();
+//        System.out.println(mPGibberman);
+
+        passportRecords.getPassportByNumber(1234567890).toString();
+
+
     }
 }
