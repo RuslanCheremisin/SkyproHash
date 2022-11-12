@@ -6,11 +6,11 @@ import java.util.Random;
 public class MultiplicationTasksForStudents {
     private Set<String> multiplicationTasks = new HashSet<>();
 
-    public void randomizeTasks() {
+    public void randomizeTasks(int numberOfTasks) {
         int min = 2;
         int max = 9;
         Random random = new Random();
-        while (multiplicationTasks.size() < 15) {
+        while (multiplicationTasks.size() < numberOfTasks) {
             int multiplier = random.nextInt(max - min) + min;
             int multiplicand = random.nextInt(max - min) + min;
             String task = (multiplier + "*" + multiplicand);
@@ -23,7 +23,7 @@ public class MultiplicationTasksForStudents {
         }
     }
     public void printAllTasks(){
-        System.out.println("15 tasks for multiplication:");
+        System.out.println("Tasks for multiplication:");
         System.out.println(Arrays.toString(multiplicationTasks.toArray()));
     }
 

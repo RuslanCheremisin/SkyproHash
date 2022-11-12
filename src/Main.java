@@ -48,7 +48,7 @@ public class Main {
                 "---------------------------------");
 
         MultiplicationTasksForStudents tasks = new MultiplicationTasksForStudents();
-        tasks.randomizeTasks();
+        tasks.randomizeTasks(15);
         tasks.printAllTasks();
     }
 }
