@@ -35,7 +35,6 @@ public class Passport {
     }
 
 
-
     public int getPassportNo() {
         return passportNo;
     }
@@ -105,7 +104,7 @@ public class Passport {
                     "Passport No: " + passportNo;
         } else {
             return name + " " + patronymic + " " + surname + " " + "\n" +
-                    "Date of birth: "+birthDate + "\n" +
+                    "Date of birth: " + birthDate + "\n" +
                     "Passport No: " + passportNo;
         }
     }
