@@ -33,8 +33,6 @@ public class Main {
         Recipe neOkroshka = new Recipe("Okroshka");
 
 
-//        System.out.println(okroshka.equals(salad));
-
         RecipeLibrary rL = new RecipeLibrary();
         rL.addRecipe(salad);
         rL.addRecipe(okroshka);
@@ -52,20 +50,25 @@ public class Main {
 
         MultiplicationTasksForStudents tasks = new MultiplicationTasksForStudents();
         tasks.randomizeTasks(15);
-//        tasks.printAllTasks();
+        tasks.printAllTasks();
 
         PassportRecords passportRecords = new PassportRecords();
         Passport mGibberman = new Passport(1234567890,"Mikhail", null, "Gibbermann", "12.12.2022");
         passportRecords.addPassport(mGibberman);
 //        System.out.println(mGibberman);
         passportRecords.printAllPassportsData();
-        Passport mPGibberman = new Passport(1234567890,"Mikhail", "Petrovich", "Gibbermann", "31.12.2022");
+        Passport mPGibberman = new Passport(1234567890,"Mikhail", "Petrovich", "Gibbermann", "31.08.1981");
         passportRecords.addPassport(mPGibberman);
         passportRecords.printAllPassportsData();
 //        System.out.println(mPGibberman);
+        Passport rATsybulsky = new Passport(1234123412, "Roman", "Aleksandrovich", "Tsybulsky", "12.08.1990");
+        passportRecords.addPassport(rATsybulsky);
+
+//        passportRecords.printAllPassportsData();
 
         passportRecords.getPassportByNumber(1234567890).toString();
 
 
     }
+
 }
