@@ -12,7 +12,9 @@ public class RecipeLibrary {
                 throw new IllegalArgumentException("This recipe is already in the library!");
             }
 
-        }if (recipe.getRecipeName()==null) {
+        }
+
+        if (recipe.getRecipeName()==null) {
             throw new IllegalArgumentException("Not enough data on the product!");
         } else {
             recipes.add(recipe);

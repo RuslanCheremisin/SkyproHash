@@ -5,9 +5,12 @@ public class Product {
 
     private double price;
 
-    public Product(String name, double price){
+    private int weight;
+
+    public Product(String name, double price, int weight){
         this.name = name;
         this.price = price;
+        this.weight = weight;
     }
 
     public String getName() {
@@ -16,6 +19,10 @@ public class Product {
 
     public double getPrice(){
         return price;
+    }
+
+    public int getWeight() {
+        return weight;
     }
 
     @Override

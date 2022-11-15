@@ -1,46 +1,50 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class Recipe {
 
     private final String recipeName;
-    private Set<Product> productList = new HashSet<>();
-    private double cost=0;
+    private HashMap<Product, Integer> productList = new HashMap<>();
+    private double cost = 0;
 
-    public Recipe(String recipeName){
+    public Recipe(String recipeName) {
         this.recipeName = recipeName;
     }
 
-    public void addProduct(Product product) throws IllegalArgumentException{
-        for (Product p : productList) {
-            if (product.equals(p)) {
+    public void addProduct(Product product, Integer quantity) {
+        if (quantity == null || quantity <= 0) {
+            quantity = 1;
+        }
+        for (Map.Entry<Product, Integer> entry : productList.entrySet()) {
+            if (entry.getKey().getName().equals(product.getName())) {
                 throw new IllegalArgumentException("Product is already in the list!");
             }
         }
-        if (product.getName()==null) {
+        if (product.getName() == null) {
             throw new IllegalArgumentException("Not enough data on the product!");
         } else {
-            productList.add(product);
+            productList.put(product, quantity);
         }
     }
 
-    public double getTotalProductsCost(){
+    public double getTotalProductsCost() {
 
-        for(Product p: productList){
-            cost += p.getPrice();
+        for (Map.Entry<Product, Integer> entry : productList.entrySet()) {
+            cost += entry.getKey().getPrice() * entry.getValue();
         }
         return cost;
     }
-    public void printIngredients(){
-        System.out.println(Arrays.toString(productList.toArray())+"\n" +
-                "---------------------------------");
+
+    public void printIngredients() {
+        System.out.println(recipeName + " ingredients:");
+        for (Map.Entry<Product, Integer> entry : productList.entrySet()) {
+            System.out.println(entry.getKey().getName() + ": " + entry.getValue() + " pcs");
+        }
+        System.out.println("----------------------------");
     }
 
     @Override
-    public int hashCode(){
-        return Objects.hash(recipeName,productList);
+    public int hashCode() {
+        return Objects.hash(recipeName, productList);
     }
 
     @Override
@@ -48,21 +52,20 @@ public class Recipe {
         if (this == o) {
             return true;
         }
-        if (o==null || this.getClass()!=o.getClass()){
+        if (o == null || this.getClass() != o.getClass()) {
             return false;
         }
         Recipe recipe = (Recipe) o;
         return Objects.equals(recipe.recipeName, recipeName);
     }
+
     public String getRecipeName() {
         return recipeName;
     }
-//    public Set<Product> getProductList(){
-//        return productList;
-//    }
+
 
     @Override
-    public String toString(){
+    public String toString() {
         return getRecipeName();
     }
 
