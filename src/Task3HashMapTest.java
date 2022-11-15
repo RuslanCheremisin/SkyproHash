@@ -8,14 +8,19 @@ public class Task3HashMapTest {
 
     public static void addEntry(String key, Integer value) {
         if (!hashMapTest.isEmpty()) {
-            Iterator<Map.Entry<String, Integer>> itr = hashMapTest.entrySet().iterator();
-            while (itr.hasNext()) {
-                if (itr.next().getKey() == key && itr.next().getValue()==value) {
-                    throw new IllegalArgumentException("This entry already exists");
+            if (hashMapTest.containsKey(key) && hashMapTest.get(key)==value){
+                throw new IllegalArgumentException("This entry already exists");
                 } else {
                     hashMapTest.put(key, value);
                 }
-            }
+//            Iterator<Map.Entry<String, Integer>> itr = hashMapTest.entrySet().iterator();
+//            while (itr.hasNext()) {
+//                if (itr.next().getKey() == key && itr.next().getValue()==value) {
+//                    throw new IllegalArgumentException("This entry already exists");
+////                } else {
+////                    hashMapTest.put(key, value);
+////                }
+//            }
         } else {
             hashMapTest.put(key, value);
         }

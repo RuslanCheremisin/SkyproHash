@@ -95,14 +95,13 @@ public class Main {
 
         /////////////////////////// Задание про добавление в мапу ////////////////////////////
 //
+        Task3HashMapTest.addEntry("str1", 1);
 //        Task3HashMapTest.addEntry("str1", 1);
-////        Task3HashMapTest.addEntry("str1", 1);
+        Task3HashMapTest.addEntry("str2", 1);
 //        Task3HashMapTest.addEntry("str2", 1);
-////        Task3HashMapTest.addEntry("str2", 1);
-//        Task3HashMapTest.addEntry("str3", 1);
-//        Task3HashMapTest.addEntry("str4", 1);
-//        Task3HashMapTest.printAllEntries();
-//        не решил(((
+        Task3HashMapTest.addEntry("str3", 1);
+        Task3HashMapTest.addEntry("str4", 1);
+        Task3HashMapTest.printAllEntries();
 
         //////////////////// задание про Создайте Map<String, List<Integer>>.
         // Заполните ее 5 элементами...
