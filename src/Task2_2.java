@@ -16,4 +16,5 @@ public class Task2_2 {
     public static Map<String, Integer> getMap() {
         return map;
     }
+
 }

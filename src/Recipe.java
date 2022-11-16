@@ -41,7 +41,6 @@ public class Recipe {
         }
         System.out.println("----------------------------");
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(recipeName, productList);

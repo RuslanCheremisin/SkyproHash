@@ -22,8 +22,7 @@ public class Main {
 
         ;
 
-//        System.out.println(Arrays.toString(salad.getProductList().toArray()));
-        System.out.println(salad.getTotalProductsCost());
+        System.out.println("This recipe product's list costs "+salad.getTotalProductsCost());
 
         Recipe okroshka = new Recipe("Okroshka");
         okroshka.addProduct(potato,2);
@@ -39,31 +38,30 @@ public class Main {
 //        rL.addRecipe(neOkroshka);
 
         salad.printIngredients();
-        rL.printRecipeLibrary();
+//        rL.printRecipeLibrary();
 
         Task2 task2 = new Task2();
         task2.randomizeIntegers();
-        System.out.println(Arrays.toString(task2.getIntegers().toArray()));
+//        System.out.println(Arrays.toString(task2.getIntegers().toArray()));
         task2.removeOdds();
-        System.out.println(Arrays.toString(task2.getIntegers().toArray())+"\n" +
-                "---------------------------------");
+//        System.out.println(Arrays.toString(task2.getIntegers().toArray())+"\n" +
+//                "---------------------------------");
 
         MultiplicationTasksForStudents tasks = new MultiplicationTasksForStudents();
         tasks.randomizeTasks(15);
-        tasks.printAllTasks();
+//        tasks.printAllTasks();
 
         PassportRecords passportRecords = new PassportRecords();
         Passport mGibberman = new Passport(1234567890,"Mikhail", null, "Gibbermann", "12.12.2022");
         passportRecords.addPassport(mGibberman);
 //        System.out.println(mGibberman);
-        passportRecords.printAllPassportsData();
+//        passportRecords.printAllPassportsData();
         Passport mPGibberman = new Passport(1234567890,"Mikhail", "Petrovich", "Gibbermann", "31.08.1981");
         passportRecords.addPassport(mPGibberman);
-        passportRecords.printAllPassportsData();
+//        passportRecords.printAllPassportsData();
 //        System.out.println(mPGibberman);
         Passport rATsybulsky = new Passport(1234123412, "Roman", "Aleksandrovich", "Tsybulsky", "12.08.1990");
         passportRecords.addPassport(rATsybulsky);
-
 //        passportRecords.printAllPassportsData();
 
         passportRecords.getPassportByNumber(1234567890).toString();
