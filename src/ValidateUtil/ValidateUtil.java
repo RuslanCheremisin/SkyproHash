@@ -46,7 +46,6 @@ public class ValidateUtil {
                 Integer.parseInt(birthDate.substring(3,5))>0 &&
                 Integer.parseInt(birthDate.substring(6))<= LocalDate.now().getYear() &&
                 Integer.parseInt(birthDate.substring(6))>=LocalDate.now().getYear()-120){
-
                 return birthDate;
 
         }else {

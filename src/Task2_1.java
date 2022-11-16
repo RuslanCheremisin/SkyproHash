@@ -11,35 +11,41 @@ public class Task2_1 {
     private static List<Integer> intList3 = new ArrayList<>();
     private static List<Integer> intList4 = new ArrayList<>();
     private static List<Integer> intList5 = new ArrayList<>();
+    static List<Integer> intList = new ArrayList<>();
 
-
+    public static List<Integer> getIntList() {
+        return intList;
+    }
 
     public static void randomize(){
-        intList1.add(rndm.nextInt(1000));
-        intList1.add(rndm.nextInt(1000));
-        intList1.add(rndm.nextInt(1000));
 
-        intList2.add(rndm.nextInt(1000));
-        intList2.add(rndm.nextInt(1000));
-        intList2.add(rndm.nextInt(1000));
-
-        intList3.add(rndm.nextInt(1000));
-        intList3.add(rndm.nextInt(1000));
-        intList3.add(rndm.nextInt(1000));
-
-        intList4.add(rndm.nextInt(1000));
-        intList4.add(rndm.nextInt(1000));
-        intList4.add(rndm.nextInt(1000));
-
-        intList5.add(rndm.nextInt(1000));
-        intList5.add(rndm.nextInt(1000));
-        intList5.add(rndm.nextInt(1000));
 
         map1.put("str1", intList1);
         map1.put("str2", intList2);
         map1.put("str3", intList3);
         map1.put("str4", intList4);
         map1.put("str5", intList5);
+
+        for (Map.Entry entry: map1.entrySet()) {
+
+        }
+
+        for (int i = 0; i < 3; i++) {
+            intList1.add(rndm.nextInt(1000));
+        }
+        for (int i = 0; i < 3; i++) {
+            intList2.add(rndm.nextInt(1000));
+        }
+        for (int i = 0; i < 3; i++) {
+            intList3.add(rndm.nextInt(1000));
+        }
+        for (int i = 0; i < 3; i++) {
+            intList4.add(rndm.nextInt(1000));
+        }
+        for (int i = 0; i < 3; i++) {
+            intList5.add(rndm.nextInt(1000));
+        }
+
     }
 
     public static void convert(){
@@ -59,8 +65,5 @@ public class Task2_1 {
         }
         System.out.println("--------------------");
     }
-
-
-
 
 }

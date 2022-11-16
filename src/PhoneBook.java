@@ -6,7 +6,6 @@ public class PhoneBook {
     public static HashMap<String, String> getPhoneBook(){
         return phoneBook;
     }
-
     public static void printAllRecords(){
         System.out.println("Phone book entries:");
         for (Map.Entry<String, String> entry: phoneBook.entrySet()

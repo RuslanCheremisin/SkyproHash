@@ -95,7 +95,6 @@ public class Passport {
                 Objects.equals(passport.birthDate, birthDate) &&
                 passport.passportNo == passportNo;
     }
-
     @Override
     public String toString() {
         if (patronymic == null) {
